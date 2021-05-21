@@ -1,11 +1,23 @@
 import React from "react";
+import Header from './Header'
+import Navbar from './components/Navbar'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { GlobalStyle, homeSty } from "./globalstles";
 
-const App = () => {
+
+function App () {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+      <Router>
+        <GlobalStyle />
+        <Navbar />
+        <homeSty>
+             <h1> Madam Doe's Pizza</h1>
+          
+        </homeSty>
+
+        <Header/>
+        
+      </Router>
   );
 };
 export default App;
